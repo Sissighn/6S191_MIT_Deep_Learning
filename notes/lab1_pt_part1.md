@@ -85,6 +85,7 @@ Neural networks process **multiple samples at once** for efficiency.
 
 Examples:
 
+```python
 matrix = torch.tensor([[1,2],[3,4]])
 images = torch.zeros(10, 3, 256, 256)
 
@@ -93,6 +94,7 @@ Tensors can be:
 manually created
 
 filled with zeros / ones / random values
+```
 
 ---
 
@@ -124,8 +126,12 @@ z = xW + b
 y = activation(z)
 
 In PyTorch:
+
+```python
 z = torch.matmul(x, W) + bias
 y = torch.sigmoid(z)
+```
+
 Where:
 
 - W = learnable weights
@@ -137,10 +143,14 @@ Where:
 # 8. Sequential Model
 
 A simple neural network can be built using:
+
+```python
 nn.Sequential(
 nn.Linear(input_size, output_size),
 nn.Sigmoid()
 )
+```
+
 This creates: Input → Linear → Sigmoid → Output
 
 ---
@@ -149,10 +159,17 @@ This creates: Input → Linear → Sigmoid → Output
 
 Instead of Sequential, models can be manually defined:
 
+```python
 class Model(nn.Module):
-def **init**(self):
-self.linear = nn.Linear(...)
-self.activation = nn.Sigmoid()
+    def __init__(self):
+        super().__init__()
+        self.linear = nn.Linear(...)
+        self.activation = nn.Sigmoid()
+
+    def forward(self, x):
+        x = self.linear(x)
+        return self.activation(x)
+```
 
 This allows flexible architectures.
 
@@ -162,8 +179,10 @@ This allows flexible architectures.
 
 A model can optionally return the input unchanged:
 
+```python
 if isidentity:
 return inputs
+```
 
 ---
 
@@ -173,7 +192,9 @@ This demonstrates that neural networks are simply functions.
 
 # 11. Loss Function
 
+```python
 loss = (x - x_pred)\*\*2
+```
 
 Loss measures prediction error. Training aims to minimize loss.
 
