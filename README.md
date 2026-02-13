@@ -25,17 +25,17 @@ Unmodified original course materials from MIT (kept for reference and attributio
 
 ### Lab 1 – PyTorch & Fundamentals
 
-- [ ] PT Part 1 – Introduction
-- [ ] PT Part 2
-- [ ] PT Part 3
+- [✓] PT Part 1 – Intro
+- [ ] PT Part 2 - Music_Generation
 
 ### Lab 2 – Neural Networks
 
-- [ ] Planned
+- [ ] PT Part 1 - MNIST
+- [ ] PT Part 2 - Debiasing
 
 ### Lab 3 – Deep Learning Applications
 
-- [ ] Planned
+- [ ] LLM_Finetuning
 
 ---
 
