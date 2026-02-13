@@ -4,5 +4,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store.env
+.DS_Store
 .env
-echo ".vscode/" >> .gitignore
+echo ".vscode/" 
+settings.json
